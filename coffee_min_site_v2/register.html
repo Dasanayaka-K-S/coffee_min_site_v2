@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffee — Register</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="register">
+  <header>
+    <nav class="container nav">
+      <a class="brand" href="index.html">☕ Coffee</a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a id="cart-count" href="cart.html">Cart</a></li>
+        <li><a id="nav-login" href="login.html">Login</a></li>
+        <li><a class="active" id="nav-register" href="register.html">Register</a></li>
+        <li><a id="nav-logout" class="hidden" href="#">Logout<span id="admin-badge"></span></a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="container" style="max-width:620px">
+    <h1>Create account</h1>
+    <form id="regForm" class="card">
+      <div class="row">
+        <label style="min-width:120px" for="r-username">Username</label>
+        <input id="r-username" required>
+      </div>
+      <div class="row">
+        <label style="min-width:120px" for="r-email">Email</label>
+        <input id="r-email" type="email" required>
+      </div>
+      <div class="row">
+        <label style="min-width:120px" for="r-password">Password</label>
+        <input id="r-password" type="password" minlength="4" required>
+      </div>
+      <button class="btn" type="submit">Register</button>
+    </form>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

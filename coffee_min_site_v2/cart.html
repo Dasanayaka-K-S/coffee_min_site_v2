@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffee — Cart</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="cart">
+  <header>
+    <nav class="container nav">
+      <a class="brand" href="index.html">☕ Coffee</a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a id="cart-count" class="active" href="cart.html">Cart</a></li>
+        <li><a id="nav-login" href="login.html">Login</a></li>
+        <li><a id="nav-register" href="register.html">Register</a></li>
+        <li><a id="nav-logout" class="hidden" href="#">Logout<span id="admin-badge"></span></a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="container">
+    <h1>Add drinks to your cart</h1>
+    <form id="add-form" class="card">
+      <div class="row">
+        <label for="f-type" style="min-width:120px">Coffee type</label>
+        <select id="f-type"></select>
+      </div>
+      <div class="row">
+        <label for="f-size" style="min-width:120px">Size</label>
+        <select id="f-size"></select>
+      </div>
+      <div class="row">
+        <label for="f-milk" style="min-width:120px">Milk</label>
+        <select id="f-milk"></select>
+      </div>
+      <div class="row">
+        <label for="f-sugar" style="min-width:120px">Sugar</label>
+        <input id="f-sugar" type="number" min="0" max="5" value="0" style="max-width:120px"> <span class="small">teaspoons</span>
+      </div>
+      <div class="row">
+        <label for="f-qty" style="min-width:120px">Quantity</label>
+        <input id="f-qty" type="number" min="1" max="10" value="1" style="max-width:120px">
+      </div>
+      <button class="btn" type="submit">Add to cart</button>
+    </form>
+
+    <h2>Your cart</h2>
+    <div id="cart"></div>
+    <p id="totals" class="row"></p>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffee — Home</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="home">
+  <header>
+    <nav class="container nav">
+      <a class="brand" href="index.html">☕ Coffee</a>
+      <ul>
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a id="cart-count" href="cart.html">Cart</a></li>
+        <li><a id="nav-login" href="login.html">Login</a></li>
+        <li><a id="nav-register" href="register.html">Register</a></li>
+        <li><a id="nav-logout" class="hidden" href="#">Logout<span id="admin-badge"></span></a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="container">
+    <h1>About our coffee types</h1>
+    <p class="small">Learn about each coffee style. To order, go to the <strong>Cart</strong> page and add items using the form.</p>
+    <section id="types" class="grid"></section>
+  </main>
+  <footer class="container"><small>&copy; <span id="year"></span> Coffee</small></footer>
+  <script>
+    // set year
+    document.addEventListener('DOMContentLoaded', ()=>{
+      const y = document.querySelector('#year'); if(y) y.textContent = new Date().getFullYear();
+    });
+  </script>
+  <script src="app.js"></script>
+</body>
+</html>

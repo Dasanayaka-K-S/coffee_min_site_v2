@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffee — Login</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="login">
+  <header>
+    <nav class="container nav">
+      <a class="brand" href="index.html">☕ Coffee</a>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a id="cart-count" href="cart.html">Cart</a></li>
+        <li><a class="active" id="nav-login" href="login.html">Login</a></li>
+        <li><a id="nav-register" href="register.html">Register</a></li>
+        <li><a id="nav-logout" class="hidden" href="#">Logout<span id="admin-badge"></span></a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="container" style="max-width:560px">
+    <h1>Sign in</h1>
+    <form id="loginForm" class="card">
+      <div class="row">
+        <label style="min-width:110px" for="username">Username</label>
+        <input id="username" required placeholder="admin or your username">
+      </div>
+      <div class="row">
+        <label style="min-width:110px" for="password">Password</label>
+        <input id="password" type="password" required placeholder="admin">
+      </div>
+      <button class="btn" type="submit">Login</button>
+      <p id="loginMsg"></p>
+      <p class="notice">If username/password are <strong>admin/admin</strong>, you will be redirected to the <em>Cart</em>.</p>
+    </form>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
